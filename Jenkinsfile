@@ -43,7 +43,7 @@ podTemplate(
         stage ('Docker') {
             container ('docker') {
                 repository = "radha2k17/hello"
-                sh "docker build -t ${repository}:${commitId} ."
+                sh "docker build -t hello:${commitId} ."
                 sh "docker push ${repository}:${commitId}"
             }
         }
